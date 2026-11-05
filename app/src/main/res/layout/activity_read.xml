@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="24dp"
+            android:text="Buscar Registro"
+            android:textColor="#333333"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Buscador por DNI -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="DNI (Clave de Acceso)"
+                android:layout_marginEnd="8dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etBuscarDni"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBuscarDni"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:backgroundTint="#6750A4"
+                android:text="Buscar"
+                app:cornerRadius="28dp" />
+        </LinearLayout>
+
+        <!-- Contenedor de Resultados  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F5F5F5"
+            android:padding="16dp">
+
+            <!-- Campo del DNI -->
+            <TextView
+                android:id="@+id/tvResDni"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="DNI: "
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Campo del Nombre -->
+            <TextView
+                android:id="@+id/tvResNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Nombre: "
+                android:textSize="16sp" />
+
+            <!-- Campo del Apeliido -->
+            <TextView
+                android:id="@+id/tvResApellidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Apellidos: "
+                android:textSize="16sp" />
+
+            <!-- Campo de la edad -->
+            <TextView
+                android:id="@+id/tvResEdad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Edad: "
+                android:textSize="16sp" />
+
+            <!-- Campo del email -->
+            <TextView
+                android:id="@+id/tvResEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Email: "
+                android:textSize="16sp" />
+
+            <!-- Texto para las mascotas -->
+            <TextView
+                android:id="@+id/tvResMascota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mascotas preferidas: "
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

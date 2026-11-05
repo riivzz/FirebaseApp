@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="24dp"
+            android:text="Modificar Registro"
+            android:textColor="#333333"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Buscador por DNI -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="DNI a buscar"
+                android:layout_marginEnd="8dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etUpdDniBusqueda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUpdBuscar"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:backgroundTint="#6750A4"
+                android:text="Buscar"
+                app:cornerRadius="28dp" />
+        </LinearLayout>
+
+        <!-- Campos editables para modificar (se llenarán al buscar) -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:hint="Nuevo Nombre">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUpdNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:hint="Nuevos Apellidos">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUpdApellidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:hint="Nueva Edad">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUpdEdad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:hint="Nuevo Email">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUpdEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Mascota como texto (no editable) -->
+        <TextView
+            android:id="@+id/tvUpdMascota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Mascotas preferidas: "
+            android:textSize="16sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUpdGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:backgroundTint="#6750A4"
+            android:text="Actualizar Registro"
+            android:textAllCaps="false"
+            app:cornerRadius="28dp" />
+
+    </LinearLayout>
+</ScrollView>
